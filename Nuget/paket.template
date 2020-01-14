@@ -1,0 +1,11 @@
+type file
+id Ufal.UDPipe.CSharp.Unofficial
+version 1.0.2
+authors IvanAntipov
+description
+  Nuget build for UDPipe CSharp.
+
+files
+  .tmp/* ==> lib
+  ../Bindings/runtimes/**/* ==> runtimes
+  build/Ufal.UDPipe.CSharp.Unofficial.props ==> build
