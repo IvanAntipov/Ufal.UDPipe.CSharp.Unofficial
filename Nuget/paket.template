@@ -1,7 +1,11 @@
 type file
 id Ufal.UDPipe.CSharp.Unofficial
-version 1.0.2
+version 1.0.3
 authors IvanAntipov
+projectUrl https://github.com/IvanAntipov/Ufal.UDPipe.CSharp.Unofficial
+licenseUrl https://github.com/IvanAntipov/Ufal.UDPipe.CSharp.Unofficial/blob/master/LICENSE
+repositoryUrl https://github.com/IvanAntipov/Ufal.UDPipe.CSharp.Unofficial
+
 description
   Nuget build for UDPipe CSharp.
 
