@@ -20,12 +20,12 @@ namespace Ufal.UDPipe.CSharp.Unofficial.Helpers
 
         }
 
-        public string ToLemText(string text, IReadOnlyCollection<string> wordTypesToUse)
+        public string ToLemText(string text, IReadOnlyCollection<string> wordTypesToUse = null)
         {
             return string.Join(
                 " ",
                 ParseConllu(text)
-                    .Where(i => wordTypesToUse.Contains(i.Type))
+                    .Where(i => wordTypesToUse?.Contains(i.Type)??true)
                     .Select(i => i.Lem));
         }
 
