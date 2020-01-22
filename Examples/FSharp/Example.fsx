@@ -15,18 +15,18 @@ module Kernel =
 
 Kernel.SetDllDirectory( __SOURCE_DIRECTORY__ @@ @"packages\Ufal.UDPipe.CSharp.Unofficial\runtimes\win-x64")
 
-Console.Error.Write("Loading model: ");
+Console.WriteLine("Loading model: ");
 
 // download model from @"https://lindat.mff.cuni.cz/repository/xmlui/bitstream/handle/11234/1-2898/russian-syntagrus-ud-2.3-181115.udpipe?sequence=71&isAllowed=y";
 let modelFile = @"c://tmp/russian-syntagrus-ud-2.3-181115.udpipe"
 let model: Model = Model.load(modelFile);
 
 if (model |> isNull) then
-    Console.Error.WriteLine("Cannot load model from file '{0}'", modelFile);
+    Console.WriteLine("Cannot load model from file '{0}'", modelFile);
     failwith "Failed"
 
 
-Console.Error.WriteLine("done");
+Console.WriteLine("done");
 
 
 
@@ -37,6 +37,7 @@ let process text =
     use error : ProcessingError = new ProcessingError()
 
     let processed = pipeline.process(text, error);
+    if error.occurred() then do failwithf "Error occured %s" error.message
     processed
 
 let texts = 

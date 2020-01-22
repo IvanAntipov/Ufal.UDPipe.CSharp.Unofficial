@@ -20,3 +20,10 @@ Download model file (example https://lindat.mff.cuni.cz/repository/xmlui/bitstre
 Save ```russian-syntagrus-ud-2.3-181115.udpipe``` to c://tmp/
 
 Run Example.fsx in interactive mode, or with "fsianycpu Example.fsx" (fsianycpu should be in path)
+
+Expected output:
+```
+Loading model:
+done
+0: мама мыть рама мыло
+```
