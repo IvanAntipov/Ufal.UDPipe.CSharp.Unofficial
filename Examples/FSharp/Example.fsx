@@ -43,6 +43,7 @@ let process text =
 let texts = 
     [
         "Мама мыла раму мылом"
+        //"Мы решили устроить дружескую встречу, поэтому я поеду и встречу его"
     ]
 
 let conlluResults = texts |> List.map process 
