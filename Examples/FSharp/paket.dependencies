@@ -1,0 +1,5 @@
+generate_load_scripts: true
+framework: net472
+source https://www.nuget.org/api/v2
+nuget FSharp.Core
+nuget Ufal.UDPipe.CSharp.Unofficial
